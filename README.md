@@ -1,24 +1,51 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##  users テーブル
+| Column        | Type       | Options       |
+| ------------- | ---------- | ------------- |
+| email         | string     | null: false   |
+| password      | string     | null: false   |
+| child_name    | string     | null: false   |
+| class         | string     | null: false   |
+| childminder1  | string     | null: false   |
+| childminder2  | string     |               |
+| childminder3  | string     |               |
 
-Things you may want to cover:
+### Association
+has_many :books
 
-* Ruby version
+## books テーブル
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| attendance   | integer    | null: false                    |
+| absence      | integer    | null: false                    |
+| user_id      | references | null: false, foreign_key: true |
 
-* System dependencies
+### Association
+belongs_to :user
+has_one :attendance_details
+has_one :absence_details
 
-* Configuration
 
-* Database creation
+## attendance_details テーブル
+| Column           | Type         | Options                        |
+| ---------------- | ----------   | ------------------------------ |
+| condition        | integer      | null: false                    |
+| body_temperature | integer      | null: false                    |
+| mood             | integer      | null: false                    |
+| sleep            | integer      | null: false                    |
+| comments         | text         |                                |
 
-* Database initialization
 
-* How to run the test suite
+### Association
+belongs_to :books
 
-* Services (job queues, cache servers, search engines, etc.)
+## absence_details テーブル
+| Column           | Type         | Options                        |
+| ---------------- | ----------   | ------------------------------ |
+| reason           | integer      | null: false                    |
+| disease_name     | text         |                                |
+| comment          | text         |                                |
 
-* Deployment instructions
-
-* ...
+### Association
+belongs_to :books

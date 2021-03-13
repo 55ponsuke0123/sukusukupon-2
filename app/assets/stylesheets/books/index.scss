@@ -1,0 +1,28 @@
+body {
+  //background-color: #81d8d0;
+    background-color: #fff;
+    background-image:
+      radial-gradient(#7bded9 20%, transparent 20%),
+      radial-gradient(pink 20%, transparent 20%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+}
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top_greeting {
+font-size: 80px;
+//font-family: ;
+//color: ;
+}
+
+.bottom_greeting {
+  font-size: 80px;
+}
