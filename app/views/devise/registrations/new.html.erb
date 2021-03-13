@@ -4,7 +4,7 @@
       <h2 class="page-heading">新規登録</h2>
 
         
-        <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+        <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
 
         <div class="field">
           <%= f.label :email, "メールアドレス" %><br />
@@ -27,8 +27,8 @@
         </div>
 
         <div class="field">
-          <%= f.label :class, "クラス" %><br />
-          <%= f.text_area :class, class: :form__text %>
+          <%= f.label :classroom, "クラス" %><br />
+          <%= f.text_area :classroom, class: :form__text %>
         </div>
 
         <div class="field">

@@ -6,7 +6,7 @@
 | email         | string     | null: false   |
 | password      | string     | null: false   |
 | child_name    | string     | null: false   |
-| class         | string     | null: false   |
+| classroom     | string     | null: false   |
 | childminder1  | string     | null: false   |
 | childminder2  | string     |               |
 | childminder3  | string     |               |

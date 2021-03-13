@@ -2,24 +2,24 @@
   <div class='title-contents'>
     <% if user_signed_in? %>
      <div class='greeting'>
-        <%= "あつまれ！" %>
-        <%= image_tag "B35E25D2-ACFE-48C5-BA2C-CA0F62885D33.jpeg", class:"title-pict" %>
-        <%= "#{current_user.class}組さん！！"%>
-     </div>
+        <%= "あつまれ！" %><br />
+        <%= "#{current_user.classroom}組さん！！"%> 
+     </div>        
+        <div class="pict"><%= image_tag "B35E25D2-ACFE-48C5-BA2C-CA0F62885D33.jpeg" %></div>
      <div class='top_greeting'>
          <%=link_to "入室する", new_book_path, class: :greeting_btn%>
          <%=link_to "ログアウトする", destroy_user_session_path, method: :delete,class: :greeting_logout%>
      </div>
      <% else %>
      <div class='greeting'>
-        <%= "あつまれ！" %>
-        <%= image_tag "B35E25D2-ACFE-48C5-BA2C-CA0F62885D33.jpeg", class:"title-pict" %>
+        <%= "あつまれ！" %><br />
         <%= "スクスク組さん！！"%>
      </div>
-     <div class='bottom_greeting'>
+        <div class="pict"><%= image_tag "B35E25D2-ACFE-48C5-BA2C-CA0F62885D33.jpeg" %></div>
+     <div class='top_greeting'>
          <%=link_to "ログインする", new_user_session_path, class: :greeting_btn%>
          <%=link_to "新規登録する", new_user_registration_path, class: :greeting_btn%>
-         </div>
+     </div>
     <% end %>
   </div>
 </div>
