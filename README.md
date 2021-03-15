@@ -19,7 +19,7 @@ has_many :books
 | ------------ | ---------- | ------------------------------ |
 | attendance   | integer    | null: false                    |
 | absence      | integer    | null: false                    |
-| user_id      | references | null: false, foreign_key: true |
+| user         | references | null: false, foreign_key: true |
 
 ### Association
 belongs_to :user
@@ -35,6 +35,7 @@ has_one :absence_details
 | mood             | integer      | null: false                    |
 | sleep            | integer      | null: false                    |
 | comments         | text         |                                |
+| book_id          | references   | null: false, foreign_key: true |
 
 
 ### Association
@@ -46,6 +47,7 @@ belongs_to :books
 | reason           | integer      | null: false                    |
 | disease_name     | text         |                                |
 | comment          | text         |                                |
+| book_id          | references   | null: false, foreign_key: true |
 
 ### Association
 belongs_to :books

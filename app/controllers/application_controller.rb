@@ -12,6 +12,6 @@ class ApplicationController < ActionController::Base
   end
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:child_name, :class, :childminder1, :childminder2, :childminder3])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:child_name, :classroom, :childminder1, :childminder2, :childminder3])
   end
 end
