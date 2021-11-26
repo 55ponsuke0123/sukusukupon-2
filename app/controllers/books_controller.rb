@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index]
   
   def index
   end
@@ -9,6 +9,9 @@ class BooksController < ApplicationController
   end
 
   def create
+  end
+
+  def show
   end
 
 end

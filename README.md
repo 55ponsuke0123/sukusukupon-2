@@ -17,8 +17,7 @@ has_many :books
 ## books テーブル
 | Column       | Type       | Options                        |
 | ------------ | ---------- | ------------------------------ |
-| attendance   | integer    | null: false                    |
-| absence      | integer    | null: false                    |
+| presence_id  | integer    | null: false                    |
 | user         | references | null: false, foreign_key: true |
 
 ### Association
